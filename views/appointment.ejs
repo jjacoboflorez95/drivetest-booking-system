@@ -1,0 +1,53 @@
+<%-   include('./partials/head.ejs')   %>
+    <link rel="stylesheet" href="../css/appointment.css">
+    <title>Appointment</title>    
+</head>
+<body>
+    <%-   include('./partials/header_navbar.ejs')   %>
+    <main>
+        <img id="appointment_image" src="/images/g_image.png" alt="">
+        <% if(selectingDate) { %>
+            <form action="appointment_date" method="post">                                                   
+                <% if(dateNotPicked) { %>
+                    <div id="date_not_picked">
+                        <label for="">You haven't selected a date.</label>                                                 
+                    </div>  
+                <% } %>
+                <div class="div_date_time"> 
+                    <input type="text" name="date" id="date" placeholder="Date..." onfocus="(this.type='date')">
+                    <input type="submit" name="confirm_date" value="Confirm date" class="form_submit">                        
+                </div>
+            </form>
+        <% } else { %>
+            <form action="appointment_slots" method="post">   
+                <% if(slotNotPicked) { %>
+                    <div id="slot_not_picked">
+                        <label for="">You haven't selected any new slot to save.</label>                                                 
+                    </div>  
+                <% } %> 
+                <div class="div_date_time">                    
+                    <label for="">Date picked: <%= datePicked %></label>  
+                    <input id="change_date" type="submit" name="change_date" value="Change date" class="form_submit">                                           
+                </div>          
+                <div id="div_times">                
+                    <input type="submit" name="slot_button" value="9:00" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("9:00")) { %>disabled<% } %>>        
+                    <input type="submit" name="slot_button" value="9:30" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("9:30")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="10:00" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("10:00")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="10:30" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("10:30")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="11:00" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("11:00")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="11:30" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("11:30")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="12:00" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("12:00")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="12:30" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("12:30")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="13:00" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("13:00")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="13:30" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("13:30")) { %>disabled<% } %>>
+                    <input type="submit" name="slot_button" value="14:00" class="form_submit" <% if (currentTimesArray && currentTimesArray.includes("14:00")) { %>disabled<% } %>>                                        
+                </div>                
+                <div id="div_save_slots">
+                    <input id="save_slots" type="submit" name="save_slots" value="Save slots" class="form_submit"> 
+                </div>        
+            </form>
+        <% } %>
+    </main>
+    <%-   include('./partials/footer.ejs')   %>
+</body>
+</html>

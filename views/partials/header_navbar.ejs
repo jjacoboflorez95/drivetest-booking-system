@@ -1,0 +1,18 @@
+<header>        
+    <a id="logoheader" href="/dashboard"><h1>Book DriveTest <% if(usernameHeader) { %><span id="usernameHeader"><%= usernameHeader %></span><% } %></h1></a>
+    <nav>                 
+        <a href="/dashboard">DASHBOARD</a>
+        <% if(username) { %>
+            <% if(usertype == "driver") { %>      
+                <a href="/g2_exam">G2 TEST</a>
+                <a href="/g_exam">G TEST</a>                        
+            <% } %>
+            <% if(usertype == "admin") { %> 
+                <a href="/appointment">APPOINTMENT</a>
+            <% } %>
+            <a href="/logout">LOGOUT</a>
+        <% } else { %>
+        <a href="/login">LOGIN</a>        
+        <% } %>
+    </nav>
+</header>

@@ -1,0 +1,176 @@
+/*
+Assignment 2
+Name: Juan Jacobo Florez Monroy
+Student Number: 8857381
+*/
+
+main {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 150px;
+}
+
+#g_exams_image {
+	margin: auto;
+	height: 500px;
+	width: 100%;
+}
+
+form {
+	width: 100%;
+	padding: 0px 50px;
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 20px;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+form div {
+	width: 49%;
+	display: flex;
+	flex-direction: column;
+	/*align-items: start;*/
+	gap: 15px;
+}
+
+#div_date_time_g2 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+label {
+	width: 25%;
+	color: rgb(0, 63, 0);
+	text-align: center;
+	font-size: 155%;
+	font-style: italic;
+}
+
+form input[type="text"],
+form input[type="date"] {
+	font-size: 105%;
+	padding: 13px;
+	width: 80%;
+	border-radius: 7px;
+	letter-spacing: 0.5px;
+	border: 1.8px solid rgb(201, 201, 201);
+	box-sizing: border-box;
+}
+
+form input[type="text"]:hover,
+form input[type="date"]:hover {
+	border: 1.9px solid rgb(184, 184, 184);
+}
+
+form input[type="text"]:read-only {
+	background-color: rgba(248, 248, 248, 0.836);
+	color: black;
+}
+
+form input[type="submit"],
+button {
+	font-size: 110%;
+	width: 15%;
+	padding: 13px;
+	border-radius: 7px;
+	letter-spacing: 1px;
+	color: white;
+	background-color: rgb(63, 63, 63);
+	border: 1.8px solid rgb(77, 77, 77);
+	margin-top: 20px;
+	margin-bottom: 120px;
+}
+
+form input[type="submit"]:hover {
+	background-color: rgb(73, 73, 73);
+	border: 1.8px solid rgb(87, 87, 87);
+}
+
+#default_data_found {
+	padding: 0px 50px;
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+#default_data_found label {
+	width: 100%;
+	color: rgb(116, 19, 2);
+	text-align: center;
+	font-size: 185%;
+	font-style: italic;
+}
+
+/*Style for Date and time slots*/
+.form_date_times {
+	padding: 0px 170px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.form_date_times div {
+	/*width: 100%;*/
+	flex-direction: row;
+	/*justify-content: center;*/
+}
+
+#div_times input[type="submit"] {
+	width: 60%;
+	background-color: rgb(57, 92, 52);
+	border: 1.8px solid rgb(38, 85, 32);
+}
+
+#div_times input[type="submit"]:hover {
+	background-color: rgb(49, 105, 40);
+	border: 1.8px solid rgb(38, 85, 32);
+	cursor: pointer;
+}
+
+#div_times input[type="submit"]:disabled {
+	color: rgb(51, 51, 51);
+	background-color: white;
+	border: 1.8px solid rgb(143, 143, 143);
+	cursor: auto;
+}
+
+.div_date_time input[type="text"],
+.div_date_time input[type="date"] {
+	width: 30%;
+}
+
+.div_date_time input[type="submit"] {
+	width: 25%;
+	margin: 0;
+}
+
+#div_times input[type="submit"] {
+	margin: 0;
+}
+
+.div_date_time input[type="submit"] {
+	width: 25%;
+	background-color: rgb(63, 63, 63);
+	border: 1.8px solid rgb(77, 77, 77);
+}
+
+.div_date_time input[type="submit"]:hover {
+	background-color: rgb(73, 73, 73);
+	border: 1.8px solid rgb(87, 87, 87);
+	cursor: pointer;
+}

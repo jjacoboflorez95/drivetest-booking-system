@@ -1,0 +1,65 @@
+/*
+Assignment 2
+Name: Juan Jacobo Florez Monroy
+Student Number: 8857381
+*/
+
+body {
+	/*background-color: #fdebd0c0;*/
+	background-color: #fdefd9c0;
+	margin: 0;
+}
+
+h1 {
+	color: white;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 15px 70px;
+	background-color: rgba(32, 32, 32, 0.94);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+#logoheader {
+	flex-grow: 2;
+}
+
+#usernameHeader {
+	color: rgb(204, 204, 204);
+	font-style: italic;
+	font-size: 80%;
+	letter-spacing: 1px;
+	margin-left: 20px;
+}
+
+header nav {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 30px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.mainImage {
+	margin-top: 67.6px;
+}
+
+footer {
+	padding: 20px;
+	background-color: rgba(64, 64, 64, 0.882);
+	color: rgb(148, 148, 148);
+	text-align: center;
+}

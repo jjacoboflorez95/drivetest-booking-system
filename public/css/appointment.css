@@ -1,0 +1,167 @@
+/*
+Assignment 4
+Name: Juan Jacobo Florez Monroy
+Student Number: 8857381
+*/
+
+main {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	/*width: 100%;*/
+	/*box-sizing: border-box;*/
+	margin-bottom: 150px;
+}
+
+#appointment_image {
+	margin: auto;
+	height: 500px;
+	width: 100%;
+}
+
+form {
+	width: 100%;
+	padding: 0px 170px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	/*align-items: center;
+	justify-content: center;*/
+	box-sizing: border-box;
+}
+
+form div {
+	width: 100%;
+}
+
+#date_not_picked,
+#slot_not_picked {
+	padding: 0px 50px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+label {
+	width: 25%;
+	color: rgb(0, 63, 0);
+	text-align: center;
+	font-size: 155%;
+	font-style: italic;
+}
+
+#date_not_picked label,
+#slot_not_picked label {
+	width: 100%;
+	font-size: 175%;
+	color: rgb(116, 19, 2);
+}
+
+/*.div_date_time {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.div_date_time div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}*/
+
+.div_date_time {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+#div_times {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(3, auto);
+	justify-items: center;
+	row-gap: 30px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+	font-size: 105%;
+	padding: 13px;
+	width: 30%;
+	border-radius: 7px;
+	letter-spacing: 0.5px;
+	border: 1.8px solid rgb(201, 201, 201);
+	box-sizing: border-box;
+}
+
+form input[type="text"]:hover,
+form input[type="date"]:hover {
+	border: 1.9px solid rgb(184, 184, 184);
+}
+
+form input[type="submit"] {
+	font-size: 110%;
+	width: 60%;
+	padding: 13px;
+	border-radius: 7px;
+	letter-spacing: 1px;
+	color: white;
+	background-color: rgb(57, 92, 52);
+	border: 1.8px solid rgb(38, 85, 32);
+}
+
+form input[type="submit"]:hover {
+	background-color: rgb(49, 105, 40);
+	border: 1.8px solid rgb(38, 85, 32);
+	cursor: pointer;
+}
+
+form input[type="submit"]:disabled {
+	color: rgb(51, 51, 51);
+	background-color: white;
+	border: 1.8px solid rgb(143, 143, 143);
+	cursor: auto;
+}
+
+.div_date_time input[type="submit"] {
+	width: 25%;
+}
+
+#save_slots,
+.div_date_time input[type="submit"] {
+	background-color: rgb(63, 63, 63);
+	border: 1.8px solid rgb(77, 77, 77);
+}
+
+#save_slots:hover,
+.div_date_time input[type="submit"]:hover {
+	background-color: rgb(73, 73, 73);
+	border: 1.8px solid rgb(87, 87, 87);
+	cursor: pointer;
+}
+
+#div_save_slots {
+	text-align: center;
+}
+
+#save_slots {
+	width: 25%;
+	letter-spacing: 2px;
+	font-style: italic;
+}

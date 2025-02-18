@@ -1,0 +1,24 @@
+<form method="post">
+    <% if(dateTimeBd) { %>
+        <div id="div_date_time_g2">
+            <label id="label_date_time" for=""><%= dateTimePicked %></label>
+        </div>    
+    <% } %>
+        <div>            
+            <h2>Personal Information</h2>
+            <input type="text" name="firstname" id="firstname" placeholder="First name..." <% if (data && data.firstname && data.firstname != "default") { %>value="<%= data.firstname %>"<% } %> <%= readonlyText %>>
+            <input type="text" name="lastname" id="lastname" placeholder="Last name..." <% if (data && data.lastname && data.firstname != "default") { %>value="<%= data.lastname %>"<% } %> <%= readonlyText %>>
+            <input type="text" name="licenseno" id="licenseno" placeholder="License number..." <% if (data && data.licenseno && data.firstname != "default") { %>value="<%= data.licenseno %>"<% } %> <%= readonlyText %>>
+            <input type="text" name="age" id="age" placeholder="Age..." <% if (data && data.age && data.firstname != 0) { %>value="<%= data.age %>"<% } %> <%= readonlyText %>>
+            <input type="text" name="dob" id="dob" placeholder="Date of birth (DOB)..." onfocus="(this.type='date')" <% if (data && data.dob && data.firstname != "default") { %>value="<%= data.dob %>"<% } %> <%= readonlyText %>>
+        </div>                         
+        <div>
+            <h2>Cars Details</h2>
+            <input type="text" name="make" id="make" placeholder="Make..." <% if (data && data.carDetails && data.carDetails.make && data.firstname != "default") { %>value="<%= data.carDetails.make %>"<% } %>>
+            <input type="text" name="model" id="model" placeholder="Model..." <% if (data && data.carDetails && data.carDetails.model && data.firstname != "default") { %>value="<%= data.carDetails.model %>"<% } %>>
+            <input type="text" name="year" id="year" placeholder="Year..." <% if (data && data.carDetails && data.carDetails.year && data.firstname != 0) { %>value="<%= data.carDetails.year %>"<% } %>>
+            <input type="text" name="platno" id="platno" placeholder="Plat Number..." <% if (data && data.carDetails && data.carDetails.platno && data.firstname != "default") { %>value="<%= data.carDetails.platno %>"<% } %>>
+        </div>
+
+        <input type="submit" value="<%= gFormButtonText %>" formaction="<%= gFormAction %>" class="form_submit">
+</form>
